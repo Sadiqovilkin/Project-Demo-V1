@@ -1,0 +1,9 @@
+body{
+    background-color: $black-bgcolor;
+}
+#bg_img{
+    width: 100%;
+    height: 344px;
+    background-image: url("../image/Cover-Back-Area.png");
+    background-size: cover;
+}
