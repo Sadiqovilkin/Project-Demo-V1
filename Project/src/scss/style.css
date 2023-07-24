@@ -239,6 +239,12 @@ main #bg_img .volume_up {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  main #bg_img .volume_up {
+    right: 50px;
+    bottom: 140px;
+  }
+}
 main #slider {
   position: relative;
   z-index: 9999;
@@ -504,8 +510,4 @@ main #slider .mySwiper_second {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-}
-
-.sign_active {
-  top: 0;
 }/*# sourceMappingURL=style.css.map */

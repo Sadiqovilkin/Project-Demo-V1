@@ -6,7 +6,23 @@ if (btn_watchlist) {
     })  
 }
 // sign In btn
-
+const signin_open = document.getElementById("signin_btn")
+const signin_close = document.getElementById("signin_close")
+const sign_element = document.querySelector("#signin")
+if (signin_open) {        
+    signin_open.addEventListener("click",()=>{
+        console.log("salam");
+      sign_element.style.top="0"
+    })  
+}
+if (signin_close) {        
+    signin_close.addEventListener("click",()=>{
+        console.log("salam");
+      sign_element.style.top="-100%"
+    })  
+    
+    
+}
 
 
 // slider js

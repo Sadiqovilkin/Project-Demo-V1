@@ -11,6 +11,11 @@ main{
         position: relative;
         z-index: -999;
         .volume_up {
+            @media (max-width:768px) {
+                right: 50px;
+                bottom: 140px;
+            }
+            transition: .4s ease-in-out
           @extend %bordergradient;
           position: absolute;
           right: 100px;
@@ -306,6 +311,4 @@ line-height: 120%;
 
     }
 }
-.sign_active{
-    top: 0;
-}
+
