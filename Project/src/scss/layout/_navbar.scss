@@ -13,6 +13,9 @@ header {
     }
   }
   .nav_items {
+    @media (max-width:768px) {
+      display: none;
+  }
     border-radius: 8px;
     @extend %bordergradient;
     ul {
@@ -26,6 +29,9 @@ header {
         padding: 13px 17px;
         font-size: 14px;
         cursor: pointer;
+        @media (max-width:988px) {
+          padding: 12px 8px;
+      }
         a {
           @extend %textsize;
           color: inherit;
@@ -63,6 +69,9 @@ header {
     }
   }
   .nav_btns {
+    @media (max-width:768px) {
+      display: none;
+  }
     display: flex;
     gap: 15px;
     justify-content: end;
@@ -75,6 +84,9 @@ header {
       gap: 18px;
 
       padding: 13px 27px;
+      @media (max-width:988px) {
+        padding: 12px 6px;
+    }
       border-radius: 8px;
       color: #fff;
       @extend %textsize;
