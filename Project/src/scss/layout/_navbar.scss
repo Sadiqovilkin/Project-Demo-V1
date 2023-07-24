@@ -3,6 +3,7 @@ header {
   top: 46px;
   left: 0;
   right: 0;
+  z-index: 9999;
   .logo {
     width: 72px;
     height: 31px;
@@ -13,12 +14,9 @@ header {
   }
   .nav_items {
     border-radius: 8px;
-
-    border: 1px solid $gradient-first;
-    border-bottom-color: $gradient-second;
-    border-left-color: $gradient-second;
+    @extend %bordergradient;
     ul {
-      background-color: rgba(255, 255, 255, 0.267);
+      @extend %blurbackground;
       display: flex;
       border-radius: 8px;
       justify-content: space-around;
@@ -29,10 +27,7 @@ header {
         font-size: 14px;
         cursor: pointer;
         a {
-          text-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
+          @extend %textsize;
           color: inherit;
         }
         &:hover {
@@ -41,9 +36,7 @@ header {
           }
         }
         .list_hover {
-          border: 1px solid $gradient-first;
-          border-bottom-color: $gradient-second;
-          border-left-color: $gradient-second;
+          @extend %bordergradient;
           top: 70%;
           position: absolute;
           width: 67px;
@@ -53,7 +46,7 @@ header {
           border-radius: 8px;
           opacity: 0;
           ul {
-            background: rgba(255, 255, 255, 0.16);
+            @extend %blurbackground;
 
             display: flex;
             flex-direction: column;
@@ -61,10 +54,7 @@ header {
               text-align: center;
               color: #fff;
 
-              font-family: Gilroy-Medium;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 400;
+              @extend %textsize;
               padding: 7px 10px;
             }
           }
@@ -77,46 +67,35 @@ header {
     gap: 15px;
     justify-content: end;
     button {
+      @extend %bordergradient;
+      @extend %blurbackground;
+
       display: flex;
       align-items: center;
       gap: 18px;
-      background: radial-gradient(
-        107.32% 141.42% at 0% 0%,
-        rgba(255, 255, 255, 0.4) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px
-        0px rgba(255, 255, 255, 0.02) inset;
-      backdrop-filter: blur(5px);
-      border: 1px solid $gradient-first;
-      border-bottom-color: $gradient-second;
-      border-left-color: $gradient-second;
+
       padding: 13px 27px;
       border-radius: 8px;
       color: #fff;
-      text-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
+      @extend %textsize;
       position: relative;
       .btn_elements {
+        @extend %blurbackground;
+        @extend %bordergradient;
         opacity: 0;
         top: 80%;
         right: 0%;
         position: absolute;
         width: 240px;
-        border: 1px solid $gradient-first;
-        border-bottom-color: $gradient-second;
-        border-left-color: $gradient-second;
+
         border-radius: 7px;
-        background-color: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(4.360755920410156px);
+
         padding: 12px 8px;
         display: flex;
         gap: 17px;
-      
+
         .mini_card {
-            margin-top: 8px;
+          margin-top: 8px;
           width: 100%;
           display: flex;
           background-color: $black-bgcolor;
@@ -131,44 +110,44 @@ header {
               object-fit: cover;
             }
           }
-          .card_txt{
+          .card_txt {
             width: calc(100% - 70px);
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 5px 14px;
-            h4{
-                color: #FFF;
-font-family: Gilroy-Bold;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
+            h4 {
+              color: #fff;
+              font-family: Gilroy-Bold;
+              @extend %textsize;
+              font-size: 10px;
             }
           }
         }
-        .right_side{
-              
-            margin-top: 8px;
-            border-radius: 6px;
-            width: 4px;
-            height: 185px;
-            background: rgba(255, 255, 255, 0.40);
-box-shadow: -1.7471857070922852px -1.7471857070922852px 104.83114624023438px 0px rgba(0, 0, 0, 0.00);
-backdrop-filter: blur(17.47185707092285px);
-position: relative;
-&::after{
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    bottom: 50px;
-    left: -200%;
-    background: linear-gradient(146deg, rgba(12, 249, 240, 0.50) 0%, rgba(214, 134, 255, 0.50) 100%);
-}
+        .right_side {
+          margin-top: 8px;
+          border-radius: 6px;
+          width: 4px;
+          height: 185px;
+          @extend %blurbackground;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            bottom: 50px;
+            left: -200%;
+            background: linear-gradient(
+              146deg,
+              rgba(12, 249, 240, 0.5) 0%,
+              rgba(214, 134, 255, 0.5) 100%
+            );
+          }
         }
       }
-      .el_active{
+      .el_active {
         opacity: 1;
       }
       .circle {
