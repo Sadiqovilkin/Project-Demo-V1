@@ -48,13 +48,13 @@ header .nav_btns button .btn_elements .mini_card .card_txt h4, header .nav_btns 
   font-weight: 400;
 }
 
-#signin .forms form .inputs input, #signin .forms .close, main #bg_img .volume_up, header .nav_btns button .btn_elements, header .nav_btns button, header .nav_items ul li .list_hover, header .nav_items {
+#signin .forms form .btns button:hover, #signin .forms form .btns button:nth-child(2), #signin .forms form .inputs input, #signin .forms .close, main #bg_img .volume_up, header .nav_btns button .btn_elements, header .nav_btns button, header .nav_items ul li .list_hover, header .nav_items {
   border: 1px solid #0CF9EF;
   border-bottom-color: #D78BFE;
   border-left-color: #D78BFE;
 }
 
-#signin .forms form .btns button:nth-child(2), #signin .forms .close, #signin .forms, main #slider .swiper .swiper-slide:hover .slider_card, main #slider .swiper .swiper-slide .slider_card .card_btns a, header .nav_btns button .btn_elements .right_side, header .nav_btns button .btn_elements, header .nav_btns button, header .nav_items ul li .list_hover ul, header .nav_items ul {
+#signin .forms form .btns button:hover, #signin .forms form .btns button:nth-child(2), #signin .forms .close, #signin .forms, main #slider .swiper .swiper-slide:hover .slider_card, main #slider .swiper .swiper-slide .slider_card .card_btns a, header .nav_btns button .btn_elements .right_side, header .nav_btns button .btn_elements, header .nav_btns button, header .nav_items ul li .list_hover ul, header .nav_items ul {
   background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: -2.4184262753px -2.4184262753px 120.9213180542px 0px rgba(255, 255, 255, 0.02) inset;
   -webkit-backdrop-filter: blur(5px);
@@ -205,7 +205,7 @@ header .nav_btns button .btn_elements .right_side::after {
   border-radius: 50%;
   bottom: 50px;
   left: -200%;
-  background: linear-gradient(146deg, rgba(12, 249, 240, 0.5) 0%, rgba(214, 134, 255, 0.5) 100%);
+  background: linear-gradient(146deg, #0CF9EF 0%, #D78BFE 100%);
 }
 header .nav_btns button .el_active {
   opacity: 1;
@@ -236,7 +236,7 @@ header .mobile_items {
   width: 70%;
   height: 100vh;
   padding: 50px 30px;
-  background-color: black;
+  background-color: #0D0D0D;
 }
 header .mobile_items .logo {
   width: 72px;
@@ -255,11 +255,12 @@ header .mobile_items .mobil_lists ul {
   gap: 10px;
 }
 header .mobile_items .mobil_lists ul li a {
-  color: #fff;
   text-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  line-height: 120%;
+  color: #fff;
 }
 header .mobile_items .mobil_lists a {
   text-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
@@ -313,7 +314,7 @@ main #slider .swiper {
   padding-left: 70px;
   width: 100%;
   height: 100%;
-  top: -40px;
+  top: -80px;
 }
 main #slider .swiper .swiper-slide {
   text-align: center;
@@ -430,7 +431,7 @@ main #slider .swiper .swiper-button-next {
   }
 }
 main #slider .swiper .swiper-button-next::after {
-  color: white;
+  color: #fff;
   font-size: 30px;
 }
 main #slider .swiper .swiper-button-prev {
@@ -446,11 +447,11 @@ main #slider .swiper .swiper-button-prev {
   }
 }
 main #slider .swiper .swiper-button-prev::after {
-  color: white;
+  color: #fff;
   font-size: 30px;
 }
 main #slider .mySwiper_second {
-  top: -100px;
+  top: -90px;
 }
 
 #signin {
@@ -489,7 +490,7 @@ main #slider .mySwiper_second {
   align-items: center;
 }
 #signin .forms .close i {
-  color: #FFF;
+  color: #fff;
 }
 #signin .forms .form_head h3 {
   font-size: 30px;
@@ -527,7 +528,7 @@ main #slider .mySwiper_second {
   border-radius: 8px;
   background: #0D0D0D;
   padding: 10px 30px;
-  color: #FFF;
+  color: #fff;
 }
 #signin .forms form .forgot {
   text-align: end;
@@ -543,7 +544,7 @@ main #slider .mySwiper_second {
 }
 #signin .forms form .forgot p:hover {
   cursor: pointer;
-  color: #0cf9f0;
+  color: #0CF9EF;
 }
 #signin .forms form .btns {
   margin-top: 40px;
@@ -557,7 +558,8 @@ main #slider .mySwiper_second {
   background-color: transparent;
   border: none;
   border-radius: 55px;
-  color: #FFF;
+  color: #fff;
+  transition: 0.5s ease-in-out;
 }
 #signin .forms .form_foot {
   margin-top: 30px;

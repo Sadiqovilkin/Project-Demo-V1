@@ -54,7 +54,7 @@ header {
             flex-direction: column;
             li {
               text-align: center;
-              color: #fff;
+              color: $white-color;
 
               @extend %textsize;
               padding: 7px 10px;
@@ -84,7 +84,7 @@ header {
         padding: 12px 6px;
       }
       border-radius: 8px;
-      color: #fff;
+      color: $white-color;
       @extend %textsize;
       position: relative;
       .btn_elements {
@@ -95,13 +95,10 @@ header {
         right: 0%;
         position: absolute;
         width: 240px;
-
         border-radius: 7px;
-
         padding: 12px 8px;
         display: flex;
         gap: 17px;
-
         .mini_card {
           margin-top: 8px;
           width: 100%;
@@ -125,7 +122,7 @@ header {
             justify-content: space-between;
             padding: 5px 14px;
             h4 {
-              color: #fff;
+              color: $white-color;
               font-family: Gilroy-Bold;
               @extend %textsize;
               font-size: 10px;
@@ -149,8 +146,8 @@ header {
             left: -200%;
             background: linear-gradient(
               146deg,
-              rgba(12, 249, 240, 0.5) 0%,
-              rgba(214, 134, 255, 0.5) 100%
+              $gradient-first 0%,
+              $gradient-second 100%
             );
           }
         }
@@ -181,7 +178,7 @@ header {
     width: 70%;
     height: 100vh;
     padding: 50px 30px;
-    background-color: black;
+    background-color: $black-color;
     .logo {
       width: 72px;
       height: 30px;
@@ -201,11 +198,9 @@ header {
         gap: 10px;
         li {
           a {
-            color: #fff;
             text-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
+            @include text($f_size:18px , $f_style:normal ,$f_weight:400,$line_h:120%,$color:$white-color);
+  
           }
         }
       }
