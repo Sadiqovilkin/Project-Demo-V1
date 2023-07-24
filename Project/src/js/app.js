@@ -18,10 +18,16 @@ if (signin_open) {
 if (signin_close) {        
     signin_close.addEventListener("click",()=>{
         console.log("salam");
-      sign_element.style.top="-100%"
+      sign_element.style.top="-200%"
     })  
-    
-    
+}
+// BurgerMenu
+const burgermenu = document.getElementById("burgermenu")
+const mobile_element = document.querySelector(".mobile_items")
+if (burgermenu) {        
+  burgermenu.addEventListener("click",()=>{
+    mobile_element.classList.toggle("burger")
+    })  
 }
 
 
@@ -32,13 +38,17 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        640: {
+        440: {
           slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 2.2,
           spaceBetween: 20,
         },
         768: {
           slidesPerView: 4,
-          spaceBetween: 40,
+          spaceBetween: 30,
         },
         1024: {
           slidesPerView: 4.2,
@@ -53,17 +63,21 @@ var swiper = new Swiper(".mySwiper_second", {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 4.2,
-          spaceBetween: 25,
-        },
+        440: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2.2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4.2,
+            spaceBetween: 25,
+          },
       },
   });

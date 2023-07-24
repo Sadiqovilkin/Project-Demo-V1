@@ -15,7 +15,7 @@ main{
                 right: 50px;
                 bottom: 140px;
             }
-            transition: .4s ease-in-out
+            transition: .4s ease-in-out;
           @extend %bordergradient;
           position: absolute;
           right: 100px;
@@ -30,7 +30,7 @@ main{
       }
       #slider {
         position: relative;
-        z-index: 9999;
+        z-index: 9;
       
         .swiper {
           padding-top: 100px;
@@ -184,7 +184,7 @@ main{
 #signin{
     transition: .4s ease-in-out;
     position: fixed;
-    top: -100%;
+    top: -200%;
     left: 0;
     right: 0;
     bottom: 0;
