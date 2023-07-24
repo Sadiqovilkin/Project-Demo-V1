@@ -34,7 +34,7 @@
   right: $right;
   bottom: $bottom;
   font-size: $f_size;
-font-weight: $f_weight;
+  font-weight: $f_weight;
   color: $color;
   cursor: $cursor;
   border: $border;
@@ -49,8 +49,37 @@ font-weight: $f_weight;
   align-items: $align_it;
   flex-direction: $flex_direc;
 }
+@mixin text(
+  $f_size: null,
+  $f_style: null,
+  $f_weight: null,
+  $line_h: null,
+  $color:null,
+  $txt_align:null,
+){
+  font-size: $f_size;
+  font-style: $f_style;
+  font-weight: $f_weight;
+  line-height: $line_h;
+  color: $color;
+  text-align: $txt_align;
 
-
+}
+@mixin position(
+  $position: null,
+  $top: null,
+  $left: null,
+  $bottom: null,
+  $right: null,
+  $z_index: null,
+){
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  z-index: $z_index;
+}
 %logo{
 width: 100%;
 height: 100%;

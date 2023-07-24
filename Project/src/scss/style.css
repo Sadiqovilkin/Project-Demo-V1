@@ -87,9 +87,12 @@ header .nav_items ul {
 }
 header .nav_items ul li {
   position: relative;
-  color: #fff;
   padding: 13px 17px;
   font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: #fff;
   cursor: pointer;
 }
 @media (max-width: 988px) {
@@ -226,10 +229,10 @@ header .mobile_nav {
 header .mobile_items {
   transition: 0.4s ease-in-out;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: -200%;
   bottom: 0;
-  z-index: 99999;
+  z-index: 9999;
   width: 70%;
   height: 100vh;
   padding: 50px 30px;
@@ -259,12 +262,12 @@ header .mobile_items .mobil_lists ul li a {
   font-weight: 400;
 }
 header .mobile_items .mobil_lists a {
-  color: #FFF;
   text-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: #fff;
 }
 header .burger {
   left: 0;
@@ -319,14 +322,14 @@ main #slider .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 main #slider .swiper .swiper-slide .slider_card {
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
   border-radius: 9px;
 }
 main #slider .swiper .swiper-slide .slider_card .card_img {
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
   width: 297px;
   height: 170px;
   border-radius: 9px;
@@ -344,7 +347,7 @@ main #slider .swiper .swiper-slide .slider_card .card_img img {
      object-fit: cover;
 }
 main #slider .swiper .swiper-slide .slider_card .card_text {
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
   padding: 27px 10px;
   text-align: left;
   display: flex;
@@ -352,23 +355,23 @@ main #slider .swiper .swiper-slide .slider_card .card_text {
   justify-content: space-between;
 }
 main #slider .swiper .swiper-slide .slider_card .card_text h5 {
-  color: #fff;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: #fff;
 }
 main #slider .swiper .swiper-slide .slider_card .card_text p {
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
   opacity: 0;
-  color: #fff;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: #fff;
 }
 main #slider .swiper .swiper-slide .slider_card .card_btns {
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
   padding: 27px 0;
   display: none;
   opacity: 0;
@@ -457,9 +460,9 @@ main #slider .mySwiper_second {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 9999;
   width: 100%;
   height: 100vh;
-  z-index: 99999;
   background-color: rgba(0, 0, 0, 0.432);
   display: flex;
   justify-content: center;
@@ -475,6 +478,9 @@ main #slider .mySwiper_second {
   position: absolute;
   top: -18px;
   right: -18px;
+  position: absolute;
+  top: -18px;
+  right: -18px;
   width: 43px;
   height: 43px;
   border-radius: 50%;
@@ -486,21 +492,21 @@ main #slider .mySwiper_second {
   color: #FFF;
 }
 #signin .forms .form_head h3 {
-  color: #FFF;
-  text-align: center;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: #fff;
+  text-align: center;
 }
 #signin .forms .form_head h4 {
   margin-top: 42px;
-  color: #FFF;
-  text-align: center;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 21.6px */
+  line-height: 120%;
+  color: #fff;
+  text-align: center;
 }
 #signin .forms form .inputs {
   margin-bottom: 15px;
@@ -509,11 +515,11 @@ main #slider .mySwiper_second {
   gap: 9px;
 }
 #signin .forms form .inputs label {
-  color: #FFF;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: #fff;
 }
 #signin .forms form .inputs input {
   cursor: pointer;
@@ -521,18 +527,18 @@ main #slider .mySwiper_second {
   border-radius: 8px;
   background: #0D0D0D;
   padding: 10px 30px;
+  color: #FFF;
 }
 #signin .forms form .forgot {
   text-align: end;
 }
 #signin .forms form .forgot p {
   display: inline-block;
-  color: #FFF;
-  font-family: Gilroy-Medium;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: #fff;
   transition: 0.3s ease-in-out;
 }
 #signin .forms form .forgot p:hover {
@@ -560,10 +566,10 @@ main #slider .mySwiper_second {
 }
 #signin .forms .form_foot p {
   max-width: 310px;
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

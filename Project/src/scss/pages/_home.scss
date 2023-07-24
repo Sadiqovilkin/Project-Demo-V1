@@ -17,9 +17,7 @@ main{
             }
             transition: .4s ease-in-out;
           @extend %bordergradient;
-          position: absolute;
-          right: 100px;
-          bottom: 90px;
+          @include position($position:absolute,$right:100px,$bottom:90px);
           width: 42px;
           height: 42px;
           border-radius: 50%;
@@ -45,13 +43,13 @@ main{
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 0.4s ease-in-out;
+            transition: 0.5s ease-in-out;
             .slider_card {
-              transition: 0.4s ease-in-out;
+              transition: 0.5s ease-in-out;
               border-radius: 9px;
       
               .card_img {
-                transition: 0.4s ease-in-out;
+                transition: 0.5s ease-in-out;
                 width: 297px;
                 height: 170px;
                 border-radius: 9px;
@@ -66,31 +64,25 @@ main{
                 }
               }
               .card_text {
-                transition: 0.4s ease-in-out;
+                transition: 0.5s ease-in-out;
                 padding: 27px 10px;
                 text-align: left;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 h5 {
-                  color: #fff;
-                  font-size: 14px;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: 120%;
+                  @include text($f_size:14px , $f_style:normal ,$f_weight:400,$line_h:120%,$color:$white-color);
+          
                 }
                 p {
-                  transition: 0.4s ease-in-out;
+                  transition: 0.5s ease-in-out;
                   opacity: 0;
-                  color: $white-color;
-                  font-size: 12px;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: 120%;
+                  @include text($f_size:12px , $f_style:normal ,$f_weight:400,$line_h:120%,$color:$white-color);
+          
                 }
               }
               .card_btns {
-                  transition: 0.4s ease-in-out;    
+                  transition: 0.5s ease-in-out;    
                 padding: 27px 0;
                 display: none;
                 opacity: 0;
@@ -183,14 +175,9 @@ main{
 }
 #signin{
     transition: .4s ease-in-out;
-    position: fixed;
-    top: -200%;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @include position($position:fixed,$top:-200%,$left:0,$right:0,$bottom:0,$z_index:9999);
     width: 100%;
     height: 100vh;
-    z-index: 99999;
     background-color: rgba(0, 0, 0, 0.432);
     display: flex;
     justify-content: center;
@@ -202,14 +189,15 @@ main{
         border-radius: 30px;
         position: relative;
         .close{
+          @include position($position:absolute,$top:-18px,$right:-18px);
+   @extend %blurbackground;
+            @extend %bordergradient;
             position: absolute;
             top: -18px;
             right: -18px;
             width: 43px;
             height: 43px;
             border-radius: 50%;
-            @extend %blurbackground;
-            @extend %bordergradient;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -219,22 +207,12 @@ main{
         }
         .form_head{
             h3{
-                color: #FFF;
-                text-align: center;
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-line-height: 120%;
+              @include text($f_size:30px , $f_style:normal ,$f_weight:400,$line_h:120%,$color:$white-color,$txt_align:center);
+           
             }
             h4{
                 margin-top: 42px;
-                color: #FFF;
-                text-align: center;
-               
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 120%; /* 21.6px */
+                @include text($f_size:18px , $f_style:normal ,$f_weight:400,$line_h:120%,$color:$white-color,$txt_align:center);
             }
         }
         form{
@@ -244,11 +222,8 @@ line-height: 120%;
                 flex-direction: column;
                 gap: 9px;
                 label{
-                    color: #FFF;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 120%;
+                  @include text($f_size:14px , $f_style:normal ,$f_weight:400,$line_h:120%,$color:$white-color);
+          
                 }
                 input{
                     cursor: pointer;
@@ -257,18 +232,15 @@ line-height: 120%;
                     border-radius: 8px;
 background: #0D0D0D;
 padding: 10px 30px;
+color: #FFF;
                 }
             }
             .forgot{
                 text-align: end;
              p{
                 display: inline-block;
-                color: #FFF;
-                font-family: Gilroy-Medium;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 120%; 
+                @include text($f_size:12px , $f_style:normal ,$f_weight:400,$line_h:120%,$color:$white-color);
+            
                 transition: .3s ease-in-out;
                 &:hover{
                     cursor: pointer;
@@ -300,12 +272,8 @@ padding: 10px 30px;
          justify-content: center;
             p{
                 max-width: 310px;
-                color: rgba(255, 255, 255, 0.60);
-text-align: center;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 120%;
+                @include text($f_size:12px , $f_style:normal ,$f_weight:400,$line_h:120%,$color: rgba(255, 255, 255, 0.60),$txt_align:center);
+           
             }
         }
 
