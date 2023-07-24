@@ -412,6 +412,11 @@ main #slider .swiper .swiper-slide:hover .slider_card .card_img {
   width: 363px;
   height: 160px;
 }
+@media (max-width: 768px) {
+  main #slider .swiper .swiper-slide:hover .slider_card .card_img {
+    width: 100%;
+  }
+}
 main #slider .swiper .swiper-slide:hover .slider_card .card_text p {
   opacity: 1;
 }

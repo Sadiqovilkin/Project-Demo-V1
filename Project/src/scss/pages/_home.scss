@@ -127,6 +127,9 @@ main{
                   overflow: hidden;
                   width: 363px;
                   height: 160px;
+                  @media (max-width:768px) {
+                   width: 100%;
+                  }
                 }
                 .card_text {
                   p {
